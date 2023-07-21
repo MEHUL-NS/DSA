@@ -78,3 +78,27 @@
 
 
 // 3 >_ Insertion Sort
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"Enter the number of elements : ";
+    cin>>n;
+    int arr[n];
+    cout<<"Enter the array elemnts : ";
+    for(int i=0;i<n;i++)
+        cin>>arr[i];
+
+    for(int i=0;i<n;i++){
+        for(int j=i;j>0;j--){
+            if(arr[j]<arr[j-1]){
+                swap(arr[j],arr[j-1]);
+            }                       
+        }
+    }
+    cout<<"Array after Insertion Sort : ";
+    for(int i=0;i<n;i++)
+        cout<<arr[i]<<" ";
+}
+
+
